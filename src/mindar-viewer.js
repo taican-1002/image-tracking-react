@@ -88,10 +88,14 @@ const MindARViewer = (props) => {
         <a-entity mindar-image-target={"targetIndex:" + index} key={index}>
           <a-plane
             src={`#${item.idImage}`}
-            position="0 0 0"
+            position={
+              item.positionX + " " + item.positionY + " " + item.positionZ
+            }
             height="0.552"
             width="1"
-            rotation="0 0 0"
+            rotation={
+              item.rotationX + " " + item.rotationY + " " + item.rotationZ
+            }
           ></a-plane>
           <a-gltf-model
             position={
